@@ -22,7 +22,7 @@ public class GenerateCustomerTask implements Runnable {
 		}
 		
 		// Simulate user adding a customer through a web page
-		String name = "Test customer";
+		String name = "Test customer (" + Thread.currentThread().getName() + ")";
 		Customer c = new Customer(name);
 		cm.addCustomer(c);
 		totalCustomersGenerated++;
